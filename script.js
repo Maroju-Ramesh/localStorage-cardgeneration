@@ -23,7 +23,7 @@ form.addEventListener('submit', function (e) {
 function createcard(obj) {
     const list = document.getElementById("list");
     list.innerHTML = "";
-    for (i = 0; i < obj.length - 1; i++) {
+    for (i = 0; i < obj.length; i++) {
         userobj = obj[i];
         let userDiv = document.createElement("div");
         userDiv.classList.add("user");
