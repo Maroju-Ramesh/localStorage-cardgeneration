@@ -2,6 +2,14 @@ let form = document.getElementById("dataform")
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
+
+
+    // method1
+    // let usernm=e.target[0].value;
+    // let email=e.target[1].value
+
+// method2
+
     let users = JSON.parse(localStorage.getItem("data")) || []
     let usernm = document.getElementById("name").value
     let email = document.getElementById("email").value
@@ -40,3 +48,10 @@ function createcard(obj) {
         list.appendChild(userDiv);
     }
 }
+window.onload = function () {
+    let users = JSON.parse(localStorage.getItem("data")) || [];
+    if (users.length !== 0) {
+        createcard(users);
+        console.log("Data is there");
+    }
+};
